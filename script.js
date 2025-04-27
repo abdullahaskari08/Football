@@ -9,7 +9,7 @@ function explode(element) {
     let fragmentData = [
         { 
             text: "Basic Details", 
-            color:" rgb(33, 135, 238)", 
+            color:" rgb(40, 135, 238)", 
             textcolor: "black", 
             detail: `🌟 **Prophet Muhammad (S.A.W) – Personal Information** 🌟
 Full Name:
