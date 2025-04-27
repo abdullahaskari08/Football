@@ -1,0 +1,147 @@
+/* Pacifico Font Import */
+/* @font-face {
+    font-family: 'Pacifico';
+    src: url('Pacifico.ttf') format('truetype');
+} */
+
+/* Body Styles */
+body {
+    
+    
+    
+    font-family: 'arial', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(to right, #00c6ff, #0072ff); Two-color gradient */
+    background: black;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgb(248, 10, 10), 0 0 30px rgba(100, 25, 240, 0.5);
+
+    letter-spacing: 1.5px; /* حروف کے درمیان فاصلہ */
+    word-spacing: 5px; /* الفاظ کے درمیان فاصلہ */
+    line-height: 2;
+}
+
+button:hover .stars{
+    display:block;
+    filter: drop-shadow(0 0 10px #98e0f1) drop-shadow(0 0 20px #e74c3c) drop-shadow(0 0 30px #e74c3c) drop-shadow(0 0 40px #e74c3c) drop-shadow(0 0 50px #e74c3c) drop-shadow(0 0 60px #e74c3c) drop-shadow(0 0 70px #e74c3c) drop-shadow(0 0 80px #e74c3c);
+}
+/* MOHAMMAD (S.A.W) Button */
+.explode-btn {
+    
+    padding: 15px 30px;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(10, 3, 3);
+    background: rgb(53, 155, 223);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgb(109, 200, 216), 0 0 30px rgba(100, 25, 240, 0.5);
+    letter-spacing: 2px; /* حروف کے درمیان فاصلہ */
+}
+
+
+/* Glow Effect */
+.explode-btn:hover {
+    background: rgb(24, 228, 34);
+    box-shadow: 0 0 20px rgb(1, 54, 4), 0 0 40px rgba(24, 228, 34, 0.8);
+}
+
+/* Sparkling Stars Effect */
+.explode-btn::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 50%);
+    transform: rotate(0deg);
+    animation: sparkle 2s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: rotate(180deg);
+        opacity: 0.4;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0.8;
+    }
+}
+
+/* Back Button */
+#back-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: gray;
+    color: rgb(2, 2, 2);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    letter-spacing: 1.5px; /* حروف کے درمیان فاصلہ */
+}
+
+/* New Exploded Buttons */
+.fragment-btn {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(5, 3, 8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: explodeAnim 0.8s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Explosion Animation */
+@keyframes explodeAnim {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+        opacity: 1;
+    }
+}
+
+/* Message Box */
+#message {
+    font-size: 28px;
+    font-family: 'Pacifico', cursive;
+    color: rgb(147, 211, 43);
+    background: rgba(0, 225, 255, 0.7);
+    padding: 25px 35px;
+    border-radius: 10px;
+    display: none;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 2;
+}
